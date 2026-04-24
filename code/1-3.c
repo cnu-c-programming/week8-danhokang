@@ -1,21 +1,24 @@
 #include <stdio.h>
 
 char *my_strcat(char *dst, const char *src) {
-    char *ret = dst;
+    char *start = dst;
 
-    while (*dst != '\0') {
+    // dst를 문자열 끝까지 이동
+    while (*dst) {
         dst++;
     }
 
-    while (*src != '\0') {
+    // src 복사
+    while (*src) {
         *dst = *src;
         dst++;
         src++;
     }
 
+    // 마지막 null 문자 추가
     *dst = '\0';
 
-    return ret;
+    return start;
 }
 
 int main() {
@@ -23,7 +26,9 @@ int main() {
     char str2[] = "World";
 
     printf("%s\n", str1);
+
     my_strcat(str1, str2);
+
     printf("%s\n", str1);
 
     return 0;
