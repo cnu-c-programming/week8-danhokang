@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
     char s1[10] = "hi";
@@ -9,10 +8,6 @@ int main() {
     printf("%s\n", s1);
     printf("%s\n", s2);
     printf("%s\n", s3);
-
-    printf("%zu %zu\n", sizeof(s1), strlen(s1));
-    printf("%zu %zu\n", sizeof(s2), strlen(s2));
-    printf("%zu %zu\n", sizeof(s3), strlen(s3));
 
     return 0;
 }
